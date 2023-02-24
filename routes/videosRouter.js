@@ -9,4 +9,8 @@ router
     .route('/:id')
     .get(videosController.getSelectedVideo);
 
+router
+    .route('/:id/comments')
+    .get(videosController.getSelectedComments)
+
 module.exports = router;

@@ -22,3 +22,19 @@ exports.getSelectedVideo = (req, res) => {
        res.status(400).send(`Error retrieving Warehouses: ${err}`)
      );
  };
+
+ exports.getSelectedComments = (req, res) => {
+  knex('comments')
+    .where({ videos_id: req.params.id })
+    // .select('id','name','comment')
+    .then((data) => {
+      res.status(200).json(data);
+    })
+    .catch((err) =>
+      res
+        .status(400)
+        .send(
+          `Error retrieving inventories for Warehouse ${req.params.id} ${err}`
+        )
+    );
+};
