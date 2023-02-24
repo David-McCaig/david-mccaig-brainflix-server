@@ -5,4 +5,8 @@ const videosController = require('../controllers/videosController');
 
 router.get('/', videosController.getAllVideos);
 
+router
+    .route('/:id')
+    .get(videosController.getSelectedVideo);
+
 module.exports = router;
