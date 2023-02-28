@@ -13,4 +13,8 @@ router
     .route('/:id/comments')
     .get(videosController.getSelectedComments)
 
+router
+    .route('/upload')
+    .post(videosController.postVideo)
+
 module.exports = router;
