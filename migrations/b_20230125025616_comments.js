@@ -13,7 +13,7 @@
       table.string('name');
       table.string('comment', 1000);
       table.integer('likes').defaultTo(0);
-      table.timestamps(true, true);
+      table.timestamp('created_at').defaultTo(knex.fn.now());
     });
   };
   

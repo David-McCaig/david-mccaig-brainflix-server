@@ -113,6 +113,7 @@ exports.getSelectedVideo = (req, res) => {
 exports.getSelectedComments = (req, res) => {
   knex('comments')
     .where({ videos_id: req.params.id })
+    .orderBy('created_at', 'desc')
     // .select('id','name','comment')
     .then((data) => {
       res.status(200).json(data);

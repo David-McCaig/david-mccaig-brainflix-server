@@ -12,7 +12,7 @@
       table.integer('views').defaultTo(0);
       table.integer('likes').defaultTo(0);
       table.string('duration').defaultTo(0);
-      table.timestamps(true, true);
+      table.timestamp('created_at').defaultTo(knex.fn.now())
     });
   };
   
