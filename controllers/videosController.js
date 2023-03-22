@@ -72,7 +72,7 @@ exports.postVideo = async (req, res) => {
          await knex("videos").insert({
         id: uuid4(),
         title: req.body.title,
-        channel: "Dave Mirra",
+        channel: "Matt Hoffman",
         image: `http://localhost:8080/images/${req.file.filename}`,
         description: req.body.description,
         duration: "7:29"

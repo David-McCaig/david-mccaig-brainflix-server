@@ -5,7 +5,7 @@ exports.postComments = (req, res) => {
     knex('comments').insert ({
           id: uuid4(),
           videos_id: req.body.videos_id,
-          name: "Davey",
+          name: "Matt Hoffman",
           comment: req.body.comment
     })
     .then((data) => {
