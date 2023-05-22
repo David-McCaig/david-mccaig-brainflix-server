@@ -1,5 +1,5 @@
 require('dotenv').config();
-const PORT = process.env.DB_LOCAL_PORT || 5050;
+const PORT = process.env.PORT || 5050;
 const videosRouter = require('./routes/videosRouter');
 const commentsRouter = require('./routes/commentsRouter');
 const express = require('express');
@@ -20,5 +20,5 @@ app.use('/comments', commentsRouter);
 
 
 app.listen(PORT, () => {
-    console.log(`running at http://localhost:${port}`)
+    console.log(`running at http://localhost:${PORT}`)
 })
