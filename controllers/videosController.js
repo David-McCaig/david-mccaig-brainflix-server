@@ -14,39 +14,6 @@ const storage = multer.diskStorage({
 
 const upload = multer({ storage: storage })
 
-// exports.postVideo = (req, res) => {
-
-//   upload.single("image")(req, res, (err) => {
-//     if (
-//       !req.body.title ||
-//       !req.body.description
-//     ) {
-//       return res.status(400).json({
-//         message:
-//           "Please make sure to provide title and description",
-//       })
-//     }
-//     console.log(err)
-//     if(err) {
-//       res.status(500).json({error:err})
-//     }
-//     try {
-//       knex("videos").insert ({
-//         id: uuid4(),
-//         title: req.body.title,
-//         channel: "Dave Mirra",
-//         image: `http://localhost:8080/images/${req.file.filename}`,
-//         description: req.body.description,
-//         views: 0,
-//         likes: 0,
-//         duration: "7:29"
-//       })
-//     } catch (error) {
-//       res.status(500).json({error: error})
-//     }
-//   })
-// }
-
 exports.postVideo = async (req, res) => {
  
   upload.single('imageFile')(req, res, async (err)=> {
@@ -101,7 +68,7 @@ exports.getAllVideos = (_req, res) => {
 
 exports.getSelectedVideo = (req, res) => {
   knex('videos').where({ id: req.params.id })
-    // .select('id', 'title', 'channel', 'image', 'description', 'views', 'likes', 'duration')
+  
     .then((data) => {
       res.status(200).json(data[0]);
     })

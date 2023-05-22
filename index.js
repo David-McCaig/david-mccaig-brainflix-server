@@ -14,6 +14,10 @@ const multer = require('multer');
 app.use('/videos', videosRouter);
 app.use('/comments', commentsRouter);
 
+app.get('/', (_req, res) => {
+    res.send("Welcome to my API");
+  });
+
 app.listen(port, () => {
     console.log(`running at http://localhost:${port}`)
 })
