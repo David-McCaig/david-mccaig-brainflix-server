@@ -40,7 +40,7 @@ exports.postVideo = async (req, res) => {
         id: uuid4(),
         title: req.body.title,
         channel: "Matt Hoffman",
-        image: `http://localhost:8080/images/${req.file.filename}`,
+        image: `https://d-brainflix-api.herokuapp.com/images/${req.file.filename}`,
         description: req.body.description,
         duration: "7:29"
          });
