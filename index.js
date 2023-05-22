@@ -11,12 +11,13 @@ app.use(express.static('public'));
 app.use(express.json());
 const multer = require('multer');
 
-app.use('/videos', videosRouter);
-app.use('/comments', commentsRouter);
-
 app.get('/', (_req, res) => {
     res.send("Welcome to my API");
   });
+
+app.use('/videos', videosRouter);
+app.use('/comments', commentsRouter);
+
 
 app.listen(PORT, () => {
     console.log(`running at http://localhost:${port}`)
