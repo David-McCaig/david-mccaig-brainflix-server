@@ -1,4 +1,5 @@
-const port = 8080;
+require('dotenv').config();
+const port = process.env.DB_LOCAL_PORT;
 const videosRouter = require('./routes/videosRouter');
 const commentsRouter = require('./routes/commentsRouter');
 const express = require('express');
