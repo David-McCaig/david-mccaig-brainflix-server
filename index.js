@@ -1,5 +1,5 @@
 require('dotenv').config();
-const port = process.env.DB_LOCAL_PORT || 5050;
+const PORT = process.env.DB_LOCAL_PORT || 5050;
 const videosRouter = require('./routes/videosRouter');
 const commentsRouter = require('./routes/commentsRouter');
 const express = require('express');
@@ -18,6 +18,6 @@ app.get('/', (_req, res) => {
     res.send("Welcome to my API");
   });
 
-app.listen(port, () => {
+app.listen(PORT, () => {
     console.log(`running at http://localhost:${port}`)
 })
