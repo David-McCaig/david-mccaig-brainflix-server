@@ -18,6 +18,6 @@ app.get('/', (_req, res) => {
     res.send("Welcome to my API");
   });
 
-app.listen(5050, () => {
+app.listen(port, () => {
     console.log(`running at http://localhost:${port}`)
 })
