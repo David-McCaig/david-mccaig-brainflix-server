@@ -2,9 +2,9 @@
 require("dotenv").config();
 
 const {
-  DB_LOCAL_DBNAME,
-  DB_LOCAL_PASSWORD,
-  DB_LOCAL_USER,
+  DB_DATABASE,
+  DB_PASSWORD,
+  DB_USER,
   DB_HOST
 } = process.env
 /**
@@ -14,9 +14,9 @@ const {
   client: 'mysql',
   connection: {
     host: DB_HOST,
-    user: DB_LOCAL_USER,
-    password: DB_LOCAL_PASSWORD,
-    database: DB_LOCAL_DBNAME,
+    user: DB_USER,
+    password: DB_PASSWORD,
+    database: DB_DATABASE,
     charset: 'utf8',
   },
 };
