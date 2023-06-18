@@ -16,20 +16,6 @@ NodeJS, Express, MySQL, knex
 
 [![My Skills](https://skillicons.dev/icons?i=nodejs,express,mysql)](https://skillicons.dev)
 
-## Screenshots
-
-### Home Page
-![Home Page Screenshot](https://res.cloudinary.com/dui1zm17r/image/upload/v1682915123/Github/Screenshot_2023-05-01_at_4.23.52_PM_adnzwe.png)
-
-### Home Page
-![Home Page Screenshot](https://res.cloudinary.com/dui1zm17r/image/upload/v1682915123/Github/Screenshot_2023-05-01_at_4.24.12_PM_ac5jax.png)
-
-### Upload Page
-![Upload Page Screenshot](https://res.cloudinary.com/dui1zm17r/image/upload/v1682915571/Github/Screenshot_2023-05-01_at_4.29.59_PM_cir99l.png)
-
-### Upload Page
-![Upload Page mobile Screenshot](https://res.cloudinary.com/dui1zm17r/image/upload/v1682915578/Github/Screenshot_2023-05-01_at_4.24.50_PM_yxkkog.png)
-
 ## Environment Variables
 
 To run this project, you will need to add the following environment variables to your .env file
